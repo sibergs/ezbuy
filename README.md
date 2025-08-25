@@ -1,65 +1,45 @@
+EzBuy (Easy Shopping)
 
-EzBuy (Compra Fácil)
+Problem/Need: Online retail shopping, whether for food, clothing, or any other type of online product (such as Amazon).
 
-Problema/Necessidade:
-Realizar compras online/varejo, seja no ramo alimentício, vestuário ou qualquer outro tipo de produtos online (como na Amazon).
+Objective:
 
-Objetivo:
+To facilitate various types of users to make purchases and have them delivered to their homes, especially for food (some people need Uber to bring their groceries from supermarkets). The system will need to implement a shipping system.
 
-Facilitar os usuários de diversos tipos a realizarem suas compras e receberem em domicílio, principalmente alimentício (há pessoas que precisam de Uber para trazerem suas compras dos supermercados), o sistema terá que implementar um sistema de frete.
+Functional Requirements:
 
-Requisitos Funcionais:
+User Registration, Product Registration, Customer Registration, Tenant Registration (Customer = Supermarket, Fashion Stores, Electronics Stores, etc.), multi-tenant strategy. Product sales, GPS location, delivery of the product to the home, use AI to extract user characteristics to implement another functional requirement called the Implementation of a recommendation system based on user preferences. If the tenant is a supermarket, implement a food purchasing management system, where users can register their "monthly food basket," which will also be part of the recommendation system.
 
-Cadastro de Usuário
-Cadastro de Produto
-Cadastro de Cliente
-Cadastro de Tenant (Cliente = Supermercado, Lojas de moda, Lojas de produtos eletrônicos, etc), estratégia multi-tenant.
-Venda de produto
-Localização via GPS
-Levar via frete o produto ao domicílio
-Utilizar IA na extração de características do usuário para poder utilizar outro requisito funcional chamado de Implementação de Sistema de recomendação baseado nos gostos do usuário
-Se a tenant for do tipo supermercado, implementar o sistema de gerenciamento de compras alimentícias, onde será possível o usuário cadastrar sua “cesta básica mensal” que também fará parte do sistema de recomendação.
+Non-functional Requirements:
 
-Requisitos Não-funcionais:
+Performance
 
-Desempenho
+The system must process 1,000 transactions per second. The response time for a user request must not exceed 2 seconds.
 
-O sistema deve processar 1000 transações por segundo.
-O tempo de resposta para uma solicitação do usuário não deve exceder 2 segundos.
+Security
 
-Segurança
+User authentication must follow the AES-256 encryption standard. The system must be resistant to denial of service attacks.
 
-A autenticação de usuário deve seguir o padrão de criptografia AES-256.
-O sistema deve ser resistente a ataques de negação de serviço.
+Usability
 
-Usabilidade
+The user interface must be intuitive for novice users after 30 minutes of training. The system must be accessible to visually impaired users.
 
-A interface do usuário deve ser intuitiva para usuários novatos após 30 minutos de treinamento.
-O sistema deve ser acessível para usuários com deficiência visual.
+Reliability
 
-Confiabilidade
+The system must have a 99.9% availability rate. The mean time between failures (MTBF) must be at least 10,000 hours.
 
-O sistema deve ter uma taxa de disponibilidade de 99,9%.
-O tempo médio entre falhas (MTBF) deve ser de pelo menos 10.000 horas.
+Maintainability
 
-Manutenibilidade
+Software updates should not break more than 10% of existing functionality. The source code must be well-documented, with at least 80% documentation coverage.
 
-As atualizações de software não devem interromper mais de 10% das funcionalidades existentes.
-O código-fonte deve ser bem documentado, com pelo menos 80% de cobertura de documentação.
+Portability
 
-Portabilidade
+The system must be compatible with major browsers (Chrome, Firefox, Safari). The software must be able to run on Windows, Linux, and macOS operating systems.
 
-O sistema deve ser compatível com os principais navegadores (Chrome, Firefox, Safari).
-Deve ser possível executar o software em sistemas operacionais Windows, Linux e macOS.
+Efficiency
 
-Eficiência
+The system must utilize a maximum of 50% of the server's processing capacity under normal conditions. Memory resources allocated by the system must be released efficiently after a task is completed.
 
-O sistema deve utilizar no máximo 50% da capacidade de processamento do servidor em condições normais.
-Os recursos de memória alocados pelo sistema devem ser liberados eficientemente após o término de uma tarefa.
+Technologies to be Used (Front End, Back End, Database):
 
-Tecnologias a Serem Utilizadas (Front, Back, Banco de Dados):
-
-.NET 8 com EntityFramework e Dapper (EF para Escrita no database e Dapper para consulta) se tiver dúvidas, verificar benchmark entre os ORMs
-Angular
-MySQL
-Python
+.NET 8 with EntityFramework and Dapper (EF for writing to the database and Dapper for querying). If in doubt, check the benchmarks between ORMs: Angular, MySQL, Python
